@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+package com.plato.recoserver.grpc.service;
+
+option java_package = "com.plato.recoserver.grpc.service";
+option java_outer_classname = "RecoServer";
+option java_multiple_files = true;
+
+message RecoRequest {
+  //本次请求的唯一标识，保证每次请求唯一
+  string request_id = 1;
+  //请求用户的设备id
+  string device_id = 2;
+  //登陆用户的user_id
+  int64 user_id = 3;
+  //用户的会员状态
+  string vip_status = 4;
+  //推荐场景
+  string rec_scene = 5;
+  //用户连续请求的唯一标识
+  string session_id = 6;
+  //本次请求需要返回的数量
+  int32 num = 7;
+  //用户请求的页面标识
+  string page_id = 8;
+  //用户当前请求所在页的页码
+  int32 page_num = 9;
+  //请求用户的平台类型
+  Platform platform = 10;
+  //请求用户的设备操作系统
+  string os = 11;
+  //用户的网络状态
+  string network = 12;
+  //用户地理位置，经纬度表示用英文逗号分隔
+  string gps = 13;
+  //请求用户的ip地址
+  string ip = 14;
+  //本次请求需要过滤的内容
+  repeated RecoItem filters = 15;
+}
+
+enum Platform {
+  PLATFORM_UNKNOWN = 0;
+  PLATFORM_IOS = 1;
+  PLATFORM_ANDROID = 2;
+  PLATFORM_PCW = 3;
+}
+
+message RecoItem {
+  //item的id
+  int64 item_id = 1;
+
+  //item的类型
+  ItemType type = 2;
+
+  string item_tracking = 3;
+
+  string item_id2 = 4;
+
+  enum ItemType {
+    UNKNOWN = 0;
+    PRODUCT = 1;
+    ARTICLE = 2;
+    COLLECTION = 3;
+    FAVORITE = 4;
+    HELLORFIMAGE = 5;
+    HELLORfLOCAlIMAGE = 6;
+    HELLORFVIDEO = 7;
+    HELLORFIMAGESHUTER = 8;
+    HELLORFALBUMSHUTER = 9;
+    HELLORFVIDEOSHUTER = 10;
+    HELLORFALBUMS = 17;
+    LIVECOURSE = 20;
+    VIDEOCOURSE = 21;
+    MEMBERVIDEO = 22;
+  }
+}
+
+message RecoResponse {
+  string code = 1;
+  string message = 2;
+  repeated RecData rec_data = 3;
+}
+
+message RecData {
+  repeated RecoItem rec_item = 1;
+}
+
+service RecoServerService {
+  rpc getRecoResult(RecoRequest) returns (RecoResponse);
+}

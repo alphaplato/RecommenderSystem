@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.plato.recommender</groupId>
+    <artifactId>recommender-system</artifactId>
+    <version>1.0-RELEASE</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>reco-system-main-server</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <from_image></from_image>
+        <to_image_registry></to_image_registry>
+        <to_image_namespace></to_image_namespace>
+        <to_image_appname></to_image_appname>
+        <jib_tag></jib_tag>
+        <jib_username></jib_username>
+        <jib_password></jib_password>
+        <app.id>plato-rec-server</app.id>
+    </properties>
+
+</project>
