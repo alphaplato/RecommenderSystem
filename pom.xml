@@ -11,6 +11,7 @@
 
     <modules>
         <module>reco-system-main-server</module>
+        <module>reco-system-grpc-lib</module>
     </modules>
 
     <properties>
