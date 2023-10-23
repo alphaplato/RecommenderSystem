@@ -1,5 +1,3 @@
-This is a scalable recommendation system.
-
-Recommendation algorithms have gradually become a relatively mature algorithm field after years of development. Although the recommendation algorithm is not a new technology, in the process of working, it is found that for small and medium-sized companies, our recommendation system still faces a lot of costs. On the one hand, the push system as a whole is relatively complex, and on the other hand, the degree of customization of the systems provided by recommendation system service providers on the market cannot meet the functional and personalized needs of the enterprise.
-
-Based on the technology of recommendation system that I have been working on for many years, I have compiled a relatively universal, mini, and scalable general system, aiming to help small and medium-sized enterprises build recommendation systems quickly and at low cost.
+这是一个可扩展的推荐系统。
+推荐算法经过多年的发展，逐渐成为一个比较成熟的算法领域。尽管推荐算法应该不算是一个新的技术，在从业的过程中发现，对于中小型公司，推荐系统依然面临着不小的成本。一方面固然由于推荐系统整体上相对复杂，另一方面市面上的推荐系统服务提供商提供的系统的定制化程度并不能满足企业的功能个性化需求。
+在自己多年从业推荐系统的技术上，自己整理了一个相对通用、迷你、可扩展的通用系统，旨在帮助中小型企业，快速、低成本搭建推荐系统。
