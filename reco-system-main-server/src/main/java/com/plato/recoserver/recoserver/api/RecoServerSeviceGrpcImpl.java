@@ -46,32 +46,19 @@ public class RecoServerSeviceGrpcImpl extends RecoServerServiceGrpc.RecoServerSe
         itemList.stream()
                 .filter(e -> e instanceof CandidateItem)
                 .map(e -> (CandidateItem)e)
-                .map(e -> convert(context, extendInfo, e))
+                .map(e -> convert(extendInfo, e))
                 .forEach(recDataBuilder::addRecItem);
         return recDataBuilder.build();
     }
 
-    private RecoItem convert(RecommendContext context, String abBuckets, CandidateItem item) {
+    private RecoItem convert(String abBuckets, CandidateItem item) {
         StringBuilder tracking = new StringBuilder();
         tracking
-//                .append("e=").append(context.getEventId()).append("&")
-//                .append("r_source=").append(item.getSource()).append("&")
-//                .append("abBuckets=").append(abBuckets);
         .append("abBuckets=").append(abBuckets);
-        StringBuffer helloId = new StringBuffer();
-        if (StringUtils.equals("helloNewPic", context.getRequest().getRecScene())) {
-            if (item.type() == 6) {
-                helloId.append("hi");
-                helloId.append(String.valueOf(item.getId()));
-            }else {
-                helloId.append(String.valueOf(item.getId()));
-            }
-        }
         return RecoItem.newBuilder()
                 .setItemId(item.getId())
                 .setType(RecoItem.ItemType.forNumber(item.type()))
                 .setItemTracking(tracking.toString())
-                .setItemId2(helloId.toString())
                 .build();
     }
 }
