@@ -20,4 +20,4 @@ AB Test: Comes with AB test traffic segmentation and allocation functionality mo
 It also includes interfaces and functional components for profile acquisition, feature acquisition, and more.  
 
 # Contribution
-This project is under development, and your contributions are welcome!
+This project is under development, and your contributions are welcome! Contact by plato.sg.lee@gmail.com if you have any question.
