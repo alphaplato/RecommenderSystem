@@ -12,7 +12,7 @@ Scalability: Flexible expansion and customization according to business needs to
 # Key Functions
 Recall: Integrates multiple recall methods, including KV recall, vector recall, DSSM vector recall, and DeepMatch vector recall and inference.  
 Ranking: Utilizes Alibaba Cloud's EAS inference service for ranking.  
-Re-ranking Strategy: Abstract re-ranking functionality with features such as diversity, strong insertion, weight adjustment, and supports the scalability of strategies.  
+Re-ranking Strategy: Abstract re-ranking functionality with features such as diversity, forced insertion, weight adjustment, and supports the scalability of strategies.  
 Read History Filtering: Integrates read history filtering functionality.  
 Session Filtering: Incorporates session filtering functionality.  
 AB Test: Comes with AB test traffic segmentation and allocation functionality modules.  
